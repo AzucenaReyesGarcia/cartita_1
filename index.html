@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Para ti ❤️</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
@@ -15,10 +16,16 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #f8e9e3;
       font-family: 'Montserrat', sans-serif;
       color: #fff;
+      width: 100%;
+      overflow-x: hidden;
     }
 
     /* PORTADA */
@@ -26,22 +33,26 @@
     .portada {
       position: relative;
       min-height: 78vh;
+      min-height: 78svh;
       width: 100%;
+
       background-image:
         linear-gradient(
           to bottom,
           rgba(0,0,0,0.15),
           rgba(0,0,0,0.55)
         ),
-        url("foto-principal.jpg");
+        url("imagenes/foto_1.png");
 
-      background-position: center;
+      background-position: center center;
       background-size: cover;
+      background-repeat: no-repeat;
 
       display: flex;
       justify-content: center;
       align-items: flex-end;
       text-align: center;
+
       padding: 50px 20px;
     }
 
@@ -49,6 +60,7 @@
       position: relative;
       z-index: 2;
       padding-bottom: 5px;
+      width: 100%;
     }
 
     .para {
@@ -59,7 +71,7 @@
 
     .nombre {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(42px, 9vw, 58px);
+      font-size: clamp(38px, 9vw, 58px);
       font-weight: 400;
       margin-bottom: 12px;
     }
@@ -67,14 +79,15 @@
     .pareja {
       font-family: 'Playfair Display', serif;
       font-style: italic;
-      font-size: 19px;
+      font-size: clamp(17px, 4vw, 19px);
       margin-bottom: 25px;
     }
 
     .fecha {
-      font-size: 11px;
+      font-size: clamp(9px, 2.5vw, 11px);
       letter-spacing: 2px;
       text-transform: uppercase;
+      line-height: 1.8;
     }
 
     /* SECCIÓN DE CANCIÓN */
@@ -83,11 +96,14 @@
       min-height: 300px;
       background: #f8e9e3;
       color: #a18a7e;
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
+
+      padding: 45px 20px;
+      text-align: center;
     }
 
     .titulo-cancion {
@@ -99,15 +115,22 @@
     .reproductor {
       width: 190px;
       height: 190px;
+      max-width: 65vw;
+      max-height: 65vw;
+
       border-radius: 50%;
-      background-image: url("foto-cancion.jpg");
+
+      background-image: url("imagenes/foto_2.png");
       background-position: center;
       background-size: cover;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       position: relative;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     .reproductor::before {
@@ -120,17 +143,23 @@
     .boton-play {
       position: relative;
       z-index: 2;
+
       width: 75px;
       height: 75px;
+
       border: none;
       border-radius: 50%;
+
       background: #e71945;
       color: white;
       font-size: 27px;
+
       cursor: pointer;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       transition: transform 0.3s;
     }
 
@@ -138,11 +167,99 @@
       transform: scale(1.1);
     }
 
-    /* ADAPTACIÓN PARA LAPTOP */
+    /* CELULARES */
 
-    @media (min-width: 768px) {
+    @media screen and (max-width: 600px) {
+
+      .portada {
+        min-height: 75vh;
+        min-height: 75svh;
+
+        padding: 35px 15px;
+
+        background-position: center center;
+      }
+
+      .contenido {
+        padding-bottom: 10px;
+      }
+
+      .para {
+        font-size: 10px;
+        letter-spacing: 4px;
+        margin-bottom: 10px;
+      }
+
+      .nombre {
+        font-size: clamp(36px, 11vw, 48px);
+        margin-bottom: 8px;
+      }
+
+      .pareja {
+        font-size: 17px;
+        margin-bottom: 20px;
+      }
+
+      .fecha {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+        padding: 0 5px;
+      }
+
+      .cancion {
+        min-height: 270px;
+        padding: 35px 15px;
+      }
+
+      .titulo-cancion {
+        font-size: 10px;
+        letter-spacing: 4px;
+        margin-bottom: 28px;
+      }
+
+      .reproductor {
+        width: 165px;
+        height: 165px;
+      }
+
+      .boton-play {
+        width: 65px;
+        height: 65px;
+        font-size: 24px;
+      }
+    }
+
+    /* CELULARES MUY PEQUEÑOS */
+
+    @media screen and (max-width: 360px) {
+
+      .portada {
+        padding: 25px 12px;
+      }
+
+      .nombre {
+        font-size: 35px;
+      }
+
+      .fecha {
+        font-size: 8px;
+        letter-spacing: 1px;
+      }
+
+      .reproductor {
+        width: 145px;
+        height: 145px;
+      }
+    }
+
+    /* LAPTOP Y COMPUTADORAS */
+
+    @media screen and (min-width: 768px) {
+
       .portada {
         min-height: 85vh;
+        min-height: 85svh;
+        padding: 55px 30px;
       }
 
       .cancion {
@@ -154,6 +271,7 @@
         height: 210px;
       }
     }
+
   </style>
 </head>
 
@@ -169,7 +287,7 @@
 
       <h1 class="nombre">Luisfer</h1>
 
-      <p class="pareja"> F & A</p>
+      <p class="pareja">F & A</p>
 
       <p class="fecha">
         DE TU NOVIA · 29 DE NOVIEMBRE DE 2026
@@ -201,13 +319,17 @@
   </section>
 
 
+  <!-- REPRODUCTOR -->
+
   <script>
+
     const musica = document.getElementById("musica");
     const boton = document.getElementById("playBtn");
 
     boton.addEventListener("click", () => {
 
       if (musica.paused) {
+
         musica.play()
           .then(() => {
             boton.textContent = "Ⅱ";
@@ -215,9 +337,12 @@
           .catch(() => {
             alert("Agrega tu archivo de música para reproducirlo ❤️");
           });
+
       } else {
+
         musica.pause();
         boton.textContent = "▶";
+
       }
 
     });
@@ -225,6 +350,7 @@
     musica.addEventListener("ended", () => {
       boton.textContent = "▶";
     });
+
   </script>
 
 </body>
