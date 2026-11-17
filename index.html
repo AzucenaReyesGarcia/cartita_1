@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f8e9e3;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+
+    /* PORTADA */
+
+    .portada {
+      position: relative;
+      min-height: 78vh;
+      width: 100%;
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.15),
+          rgba(0,0,0,0.55)
+        ),
+        url("foto-principal.jpg");
+
+      background-position: center;
+      background-size: cover;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .contenido {
+      position: relative;
+      z-index: 2;
+      padding-bottom: 5px;
+    }
+
+    .para {
+      font-size: 12px;
+      letter-spacing: 5px;
+      margin-bottom: 12px;
+    }
+
+    .nombre {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 9vw, 58px);
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+
+    .pareja {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 19px;
+      margin-bottom: 25px;
+    }
+
+    .fecha {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* SECCIÓN DE CANCIÓN */
+
+    .cancion {
+      min-height: 300px;
+      background: #f8e9e3;
+      color: #a18a7e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .titulo-cancion {
+      font-size: 12px;
+      letter-spacing: 5px;
+      margin-bottom: 35px;
+    }
+
+    .reproductor {
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background-image: url("foto-cancion.jpg");
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reproductor::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.15);
+    }
+
+    .boton-play {
+      position: relative;
+      z-index: 2;
+      width: 75px;
+      height: 75px;
+      border: none;
+      border-radius: 50%;
+      background: #e71945;
+      color: white;
+      font-size: 27px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+
+    .boton-play:hover {
+      transform: scale(1.1);
+    }
+
+    /* ADAPTACIÓN PARA LAPTOP */
+
+    @media (min-width: 768px) {
+      .portada {
+        min-height: 85vh;
+      }
+
+      .cancion {
+        min-height: 350px;
+      }
+
+      .reproductor {
+        width: 210px;
+        height: 210px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA PRINCIPAL -->
+
+  <section class="portada">
+
+    <div class="contenido">
+
+      <p class="para">PARA</p>
+
+      <h1 class="nombre">Luisfer</h1>
+
+      <p class="pareja"> F & A</p>
+
+      <p class="fecha">
+        DE TU NOVIA · 29 DE NOVIEMBRE DE 2026
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- NUESTRA CANCIÓN -->
+
+  <section class="cancion">
+
+    <p class="titulo-cancion">
+      NUESTRA CANCIÓN
+    </p>
+
+    <div class="reproductor">
+
+      <button class="boton-play" id="playBtn">
+        ▶
+      </button>
+
+    </div>
+
+    <audio id="musica" src="nuestra-cancion.mp3"></audio>
+
+  </section>
+
+
+  <script>
+    const musica = document.getElementById("musica");
+    const boton = document.getElementById("playBtn");
+
+    boton.addEventListener("click", () => {
+
+      if (musica.paused) {
+        musica.play()
+          .then(() => {
+            boton.textContent = "Ⅱ";
+          })
+          .catch(() => {
+            alert("Agrega tu archivo de música para reproducirlo ❤️");
+          });
+      } else {
+        musica.pause();
+        boton.textContent = "▶";
+      }
+
+    });
+
+    musica.addEventListener("ended", () => {
+      boton.textContent = "▶";
+    });
+  </script>
+
+</body>
+</html>
