@@ -8,7 +8,7 @@
 
   <title>Para ti ❤️</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 
   <style>
 
@@ -258,7 +258,92 @@
 
 
     /* ==========================
-       4. CELULARES
+       4. CARTA ROMÁNTICA
+    ========================== */
+
+    .seccion-carta {
+      background: #f8e9e3;
+      padding: 55px 20px 75px;
+      color: #49332f;
+    }
+
+    .encabezado-carta {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .subtitulo-carta {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #a18a7e;
+      margin-bottom: 15px;
+    }
+
+    .titulo-carta {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(27px, 6vw, 38px);
+      font-weight: 400;
+      color: #49332f;
+    }
+
+    /* HOJA DE LA CARTA */
+
+    .hoja-carta {
+      width: 100%;
+      max-width: 750px;
+      margin: auto;
+
+      background: #f5e2d9;
+
+      padding: 50px 55px;
+
+      border-radius: 4px;
+
+      box-shadow:
+        0 8px 30px rgba(91, 57, 45, 0.06);
+    }
+
+    .etiqueta-carta {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: #a18a7e;
+      margin-bottom: 30px;
+    }
+
+    .texto-carta {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      line-height: 1.65;
+      color: #60463e;
+      text-align: left;
+    }
+
+    .texto-carta p {
+      margin-bottom: 25px;
+    }
+
+    .firma-carta {
+      font-family: 'Playfair Display', serif;
+      font-size: 23px;
+      font-style: italic;
+      color: #a45d69;
+      text-align: right;
+      margin-top: 35px;
+    }
+
+    .corazon-carta {
+      text-align: right;
+      color: #d77b8b;
+      font-size: 23px;
+      margin-top: 12px;
+    }
+
+
+    /* ==========================
+       5. CELULARES
     ========================== */
 
     @media screen and (max-width: 600px) {
@@ -341,11 +426,49 @@
         border-radius: 23px;
       }
 
+      /* CARTA EN CELULAR */
+
+      .seccion-carta {
+        padding: 45px 15px 55px;
+      }
+
+      .encabezado-carta {
+        margin-bottom: 25px;
+      }
+
+      .titulo-carta {
+        font-size: 29px;
+      }
+
+      .hoja-carta {
+        padding: 30px 23px;
+        border-radius: 5px;
+      }
+
+      .etiqueta-carta {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+      }
+
+      .texto-carta {
+        font-size: 19px;
+        line-height: 1.65;
+      }
+
+      .texto-carta p {
+        margin-bottom: 22px;
+      }
+
+      .firma-carta {
+        font-size: 21px;
+      }
+
     }
 
 
     /* ==========================
-       5. CELULARES PEQUEÑOS
+       6. CELULARES PEQUEÑOS
     ========================== */
 
     @media screen and (max-width: 360px) {
@@ -373,11 +496,19 @@
         height: 340px;
       }
 
+      .hoja-carta {
+        padding: 25px 18px;
+      }
+
+      .texto-carta {
+        font-size: 18px;
+      }
+
     }
 
 
     /* ==========================
-       6. LAPTOP Y COMPUTADORAS
+       7. LAPTOP Y COMPUTADORAS
     ========================== */
 
     @media screen and (min-width: 768px) {
@@ -402,9 +533,14 @@
         height: 380px;
       }
 
+      .seccion-carta {
+        padding: 70px 30px 90px;
+      }
+
     }
 
   </style>
+
 </head>
 
 
@@ -412,7 +548,7 @@
 
 
   <!-- ==========================
-       PORTADA PRINCIPAL
+       1. PORTADA PRINCIPAL
   ========================== -->
 
   <section class="portada">
@@ -436,7 +572,7 @@
 
 
   <!-- ==========================
-       NUESTRA CANCIÓN
+       2. NUESTRA CANCIÓN
   ========================== -->
 
   <section class="cancion">
@@ -447,7 +583,7 @@
 
     <div class="reproductor">
 
-      <button class="boton-play" id="playBtn">
+      <button class="boton-play" id="playBtn" aria-label="Reproducir canción">
         ▶
       </button>
 
@@ -460,7 +596,7 @@
 
 
   <!-- ==========================
-       GALERÍA DE RECUERDOS
+       3. GALERÍA DE RECUERDOS
   ========================== -->
 
   <section class="galeria">
@@ -502,7 +638,125 @@
 
 
   <!-- ==========================
-       REPRODUCTOR DE MÚSICA
+       4. CARTA PARA MI AMOR
+  ========================== -->
+
+  <section class="seccion-carta">
+
+    <div class="encabezado-carta">
+
+      <p class="subtitulo-carta">
+        QUIERO DECIRTE ALGUNAS COSAS
+      </p>
+
+      <h2 class="titulo-carta">
+        MI CORAZÓN 
+      </h2>
+
+    </div>
+
+    <div class="hoja-carta">
+
+      <p class="etiqueta-carta">
+        
+      </p>
+
+      <div class="texto-carta">
+
+        <p>
+          Hola, mi amor:
+        </p>
+
+        <p>
+        Hoy cumplimos nuestro primer año de novios 🥹❤️ te juro que el tiempo 
+        ah pasado tan rápido que no me creo que hoy ya sea un año 🥰❤️ pues 
+        quiero agradecerte primero que nada por hacerme muy feliz, por estar 
+        siempre para mí 🫶🏻❤️🥺 mil gracias por esforzarte para que nuestra 
+        relación funcione y mejore cada día, de verdad eres un hombre increíble
+        🥹❤️✨ eres una parte importante en mi vida, y ni se diga de lo mucho
+        que me gusta estar contigo 🥰🫶🏻❤️ de verdad amo tu compañía mi amor 🥰
+        no sabes lo feliz que me haces cuando sin avisar y de repente llegas por mí
+        a mi trabajo, oh a mi casa… 🥹 gracias por dedicarme tu tiempo, gracias por 
+        siempre hacer el esfuerzo de invitarme algo o regalarme algo, créeme que cualquier
+         cosita que venga de ti lo hace muy especial ❤️🥰✨
+        </p>
+
+        <p>
+        En este tiempo, eh aprendido mucho de ti 🥺 eres una gran persona, a 
+        veces un poco celoso 🤭 enojon y dramático pero así me encantas 🥰❤️❤️
+        estoy segura de que si seguimos cuidando nuestra relación como hasta 
+        ahora podemos hacer muchas cosas juntos, apoyarnos mutuamente como 
+        hasta ahora y muchísimas cosas más ❤️🥹✨ que claramente yo si quisiera
+        mi vida, solo contigo 🥰
+        </p>
+
+        <p>
+        Te miro y me doy cuenta de que la vida tenía algo muy bonito preparado
+        para mí, 🥹🫶🏻🥰 porque entre tantas personas tuve la fortuna de encontrarte
+        a ti. ❤️✨🫅🏻 Quizá no sabía cuándo ni cómo llegaría alguien tan 
+        especial. 🥹<br>
+        Eres esa personita que la vida puso en mi camino para
+        demostrarme que el amor más bonito sí existe. ❤️🥹 Hoy agradezco por 
+        coincidir contigo, por tenerte en mi vida. Eres mi casualidad más hermosa,
+        mi destino favorito y el amor que siempre quise encontrar. Te amo
+        muchísimo. 🥺🫶🏻❤️❤️
+        </p>
+
+        <p>
+        Amo cada una de tus ocurrencias, tus chistes, tus caricias, tus besos, tus
+        abrazos, tus ataques de amor, amo cada pedacito de ti mi vida 🥹🥰🫶🏻 <br>
+        Gracias también por enseñarme muchas cosas entre ellas a valorarme, a
+        poder confiar en alguien, el creerme que si me quieren y que soy importante
+        para alguien 🥺❤️ te amoooo muchísimo, y si sé que muchas veces me dijiste
+        que esa palabra para ti era para chavitos de secundaria pero créeme que te lo
+        digo con toda la sinceridad y con todo el amor del mundo 🥺 yo no solo puedo
+        querer a alguien como tu, tú sacas la mejor versión de mí, haces que quiera
+        darte mucho cariño y amor 🥺❤️
+        </p>
+
+        <p>
+        Llegaste a mi vida y cambiaste todo de una manera muy bonita 🥺🥺🥺 deseo
+        con todo mi corazón que nunca dejes de demostrarme tu cariño, y que siempre
+        quieras estar conmigo, tal vez no seré la mejor persona, porque si si tengo
+        muchos errores, pero créeme que mi cariño es sincero y todo lo que te digo
+        es verdad 🥺❤️ y si lo acepto muchas veces me eh dejado llevar por mi coraje
+        y te eh dicho cosas feas y no eh pensado lo que te digo, y créeme que me
+        arrepiento mucho, pero igual sé que eso no le gana a todo lo bonito que hemos
+        vivido 🥹❤️✨✨✨
+        </p>
+
+        <p>
+        No eres solamente alguien a quien amo, 🥺🥺 eres esa personita que llegó
+        a mi vida para hacerla más bonita, que sin darse cuenta cambió muchas cosas
+        dentro de mí. 🥹❤️🥰🫶🏻 Desde que te conocí, aprendí a mirar el amor de una
+        manera diferente, porque contigo descubrí sentimientos que no sabía que podía
+        experimentar. ☺️☺️ Eres inteligente, valiente, único y sobre todo muy
+        trabajador, me encanta poder estar contigo en cada momento, Y aunque a veces
+        no encuentre las palabras suficientes para explicarte lo mucho que significas
+        para mí, quiero que sepas que mi corazón te elige incluso en los días más difíciles,
+        porque entre tantas personas en este mundo, tú eres quien ocupa un lugar que
+        nadie más podría llenar. ❤️🥺🫅🏻✨
+        </p>
+
+      
+      </div>
+
+      <p class="firma-carta">
+        Con todo mi amor.
+      </p>
+
+      <p class="corazon-carta">
+        ♥
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================
+       5. REPRODUCTOR DE MÚSICA
   ========================== -->
 
   <script>
