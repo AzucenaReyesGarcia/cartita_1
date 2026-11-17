@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -205,8 +206,6 @@
       padding: 0 15px;
     }
 
-    /* CONTENEDOR DE FOTOS */
-
     .contenedor-fotos {
       display: flex;
       gap: 18px;
@@ -227,8 +226,6 @@
       display: none;
     }
 
-    /* CADA FOTOGRAFÍA */
-
     .foto-galeria {
       flex: 0 0 280px;
       height: 350px;
@@ -237,7 +234,7 @@
       overflow: hidden;
 
       background: #ead5cb;
-            scroll-snap-align: center;
+      scroll-snap-align: center;
     }
 
     .foto-galeria img {
@@ -284,8 +281,6 @@
       font-weight: 400;
       color: #49332f;
     }
-
-    /* HOJA DE LA CARTA */
 
     .hoja-carta {
       width: 100%;
@@ -384,8 +379,6 @@
       padding: 10px 0;
     }
 
-    /* LÍNEA VERTICAL */
-
     .contenedor-tiempo::before {
       content: "";
       position: absolute;
@@ -396,8 +389,6 @@
       background: #d9b7a9;
     }
 
-    /* AÑOS */
-
     .anio-tiempo {
       font-family: 'Playfair Display', serif;
       font-size: 27px;
@@ -405,8 +396,6 @@
       margin: 30px 0 25px;
       padding-left: 45px;
     }
-
-    /* EVENTOS */
 
     .evento-tiempo {
       position: relative;
@@ -426,8 +415,6 @@
       border-radius: 50%;
       z-index: 2;
     }
-
-    /* TARJETAS */
 
     .tarjeta-evento {
       position: relative;
@@ -465,8 +452,6 @@
       line-height: 1.4;
       color: #80665d;
     }
-
-    /* ESPACIO PARA AGREGAR FOTOS */
 
     .foto-evento {
       position: absolute;
@@ -564,8 +549,79 @@
       margin-top: 30px;
     }
 
+
     /* ==========================
-       6. CELULARES
+       7. ÚLTIMA PORTADA ROMÁNTICA
+       FOTO A PANTALLA COMPLETA
+    ========================== */
+
+    .tarjeta-final {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100svh;
+      width: 100%;
+      overflow: hidden;
+
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba(248, 233, 227, 0.05) 0%,
+          rgba(248, 233, 227, 0.05) 45%,
+          rgba(248, 233, 227, 0.45) 70%,
+          #f8e9e3 100%
+        ),
+        url("imagenes/ultima.png");
+
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .texto-final {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      color: #49332f;
+      padding-bottom: 35px;
+    }
+
+    .corazon-final {
+      font-size: 35px;
+      margin-bottom: 18px;
+      color: #49332f;
+    }
+
+    .nombres-final {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(35px, 8vw, 48px);
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+
+    .dedicatoria-final {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-style: italic;
+      color: #80665d;
+      margin-bottom: 30px;
+    }
+
+    .firma-final {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      letter-spacing: 4px;
+      color: #a18a7e;
+    }
+
+
+    /* ==========================
+       8. CELULARES
     ========================== */
 
     @media screen and (max-width: 600px) {
@@ -596,7 +652,8 @@
         font-size: 17px;
         margin-bottom: 20px;
       }
-            .fecha {
+
+      .fecha {
         font-size: 9px;
         letter-spacing: 1.3px;
         padding: 0 5px;
@@ -769,11 +826,32 @@
         font-size: 18px;
       }
 
+      /* ÚLTIMA PORTADA EN CELULAR */
+
+      .tarjeta-final {
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 35px 15px;
+        background-position: center center;
+      }
+
+      .texto-final {
+        padding-bottom: 30px;
+      }
+
+      .nombres-final {
+        font-size: 36px;
+      }
+
+      .dedicatoria-final {
+        font-size: 20px;
+      }
+
     }
 
 
     /* ==========================
-       7. CELULARES PEQUEÑOS
+       9. CELULARES PEQUEÑOS
     ========================== */
 
     @media screen and (max-width: 360px) {
@@ -842,7 +920,7 @@
 
 
     /* ==========================
-       8. LAPTOP Y COMPUTADORAS
+       10. LAPTOP Y COMPUTADORAS
     ========================== */
 
     @media screen and (min-width: 768px) {
@@ -984,41 +1062,40 @@
       </p>
 
       <h2 class="titulo-carta">
-        MI CORAZÓN 
+        MI CORAZÓN
       </h2>
 
     </div>
 
     <div class="hoja-carta">
 
-      <p class="etiqueta-carta">
+      <p class="etiqueta-carta"></p>
 
-      </p>
-            <div class="texto-carta">
+      <div class="texto-carta">
 
         <p>
           Hola, mi amor:
         </p>
 
         <p>
-        Hoy cumplimos nuestro primer año de novios 🥹❤️ te juro que el tiempo 
-        ah pasado tan rápido que no me creo que hoy ya sea un año 🥰❤️ pues 
-        quiero agradecerte primero que nada por hacerme muy feliz, por estar 
-        siempre para mí 🫶🏻❤️🥺 mil gracias por esforzarte para que nuestra 
+        Hoy cumplimos nuestro primer año de novios 🥹❤️ te juro que el tiempo
+        ah pasado tan rápido que no me creo que hoy ya sea un año 🥰❤️ pues
+        quiero agradecerte primero que nada por hacerme muy feliz, por estar
+        siempre para mí 🫶🏻❤️🥺 mil gracias por esforzarte para que nuestra
         relación funcione y mejore cada día, de verdad eres un hombre increíble
         🥹❤️✨ eres una parte importante en mi vida, y ni se diga de lo mucho
         que me gusta estar contigo 🥰🫶🏻❤️ de verdad amo tu compañía mi amor 🥰
         no sabes lo feliz que me haces cuando sin avisar y de repente llegas por mí
-        a mi trabajo, oh a mi casa… 🥹 gracias por dedicarme tu tiempo, gracias por 
+        a mi trabajo, oh a mi casa… 🥹 gracias por dedicarme tu tiempo, gracias por
         siempre hacer el esfuerzo de invitarme algo o regalarme algo, créeme que cualquier
-         cosita que venga de ti lo hace muy especial ❤️🥰✨
+        cosita que venga de ti lo hace muy especial ❤️🥰✨
         </p>
 
         <p>
-        En este tiempo, eh aprendido mucho de ti 🥺 eres una gran persona, a 
+        En este tiempo, eh aprendido mucho de ti 🥺 eres una gran persona, a
         veces un poco celoso 🤭 enojon y dramático pero así me encantas 🥰❤️❤️
-        estoy segura de que si seguimos cuidando nuestra relación como hasta 
-        ahora podemos hacer muchas cosas juntos, apoyarnos mutuamente como 
+        estoy segura de que si seguimos cuidando nuestra relación como hasta
+        ahora podemos hacer muchas cosas juntos, apoyarnos mutuamente como
         hasta ahora y muchísimas cosas más ❤️🥹✨ que claramente yo si quisiera
         mi vida, solo contigo 🥰
         </p>
@@ -1026,11 +1103,11 @@
         <p>
         Te miro y me doy cuenta de que la vida tenía algo muy bonito preparado
         para mí, 🥹🫶🏻🥰 porque entre tantas personas tuve la fortuna de encontrarte
-        a ti. ❤️✨🫅🏻 Quizá no sabía cuándo ni cómo llegaría alguien tan 
+        a ti. ❤️✨🫅🏻 Quizá no sabía cuándo ni cómo llegaría alguien tan
         especial. 🥹
         <br>
         Eres esa personita que la vida puso en mi camino para
-        demostrarme que el amor más bonito sí existe. ❤️🥹 Hoy agradezco por 
+        demostrarme que el amor más bonito sí existe. ❤️🥹 Hoy agradezco por
         coincidir contigo, por tenerte en mi vida. Eres mi casualidad más hermosa,
         mi destino favorito y el amor que siempre quise encontrar. Te amo
         muchísimo. 🥺🫶🏻❤️❤️
@@ -1091,7 +1168,6 @@
 
   <!-- ==========================
        5. NUESTRA LÍNEA DEL TIEMPO
-       DESPUÉS DE LA CARTA
   ========================== -->
 
   <section class="linea-tiempo">
@@ -1336,20 +1412,17 @@
 
 
   <!-- ==========================
-       ESPACIO PARA MÁS TEXTO
-       DESPUÉS DE LA LÍNEA DEL TIEMPO
+       6. ESPACIO PARA MÁS TEXTO
   ========================== -->
 
   <section class="seccion-extra">
 
     <div class="encabezado-extra">
 
-      <p class="subtitulo-extra">
-        
-      </p>
+      <p class="subtitulo-extra"></p>
 
       <h2 class="titulo-extra">
-        Tambien quiero decirte que 
+        Tambien quiero decirte que
       </h2>
 
     </div>
@@ -1358,32 +1431,30 @@
 
       <div class="texto-extra">
 
-        <!-- Reemplaza este texto por lo que quieras dedicarle -->
-
         <p>
-        No sé qué viste en mí, pero gracias por aceptar cada una de mis 
-        emociones, ❤️‍🩹 por entender esta forma tan intensa que tengo de sentir 
-        hasta la mínima cosa, de ponerme triste por pequeños detalles y de tener 
-        un corazón tan sentimental. 🫀🥹 Gracias por amarme incluso en mis días 
-        más complicados y por quererme tal y como soy. Quizás ya te lo he dicho 
+        No sé qué viste en mí, pero gracias por aceptar cada una de mis
+        emociones, ❤️‍🩹 por entender esta forma tan intensa que tengo de sentir
+        hasta la mínima cosa, de ponerme triste por pequeños detalles y de tener
+        un corazón tan sentimental. 🫀🥹 Gracias por amarme incluso en mis días
+        más complicados y por quererme tal y como soy. Quizás ya te lo he dicho
         muchas veces, pero necesito recordártelo una vez más: me encantas demasiado.
         🥰❤️ Me encanta pensar en ti, saber de ti y tenerte presente en mi vida. No
-        importa cuánto tiempo pase, siempre encuentro una razón para sonreir cuando 
+        importa cuánto tiempo pase, siempre encuentro una razón para sonreir cuando
         se trata de ti. 🥹❤️✨ De alguna forma lograste ocupar un lugar muy importante
         en mi corazón, y cada día encuentro una nueva razón para amarte todavia más.
         </p>
 
         <p>
-        Contigo entendí que el amor no siempre necesita ser perfecto para ser 
-        real, que a veces lo más bonito es estar con la persona que más amas. 🫶🏻❤️🥹 Y 
+        Contigo entendí que el amor no siempre necesita ser perfecto para ser
+        real, que a veces lo más bonito es estar con la persona que más amas. 🫶🏻❤️🥹 Y
         esa persona eres tú, para mí: tú eres mi lugar seguro, mi calma y mi sonrisa
-        más sincera. No sé cómo explicarlo exactamente, pero contigo todo se siente 
-        diferente, más bonito, más ligero, más verdadero. 🫀😌 Y si algún día dudo 
+        más sincera. No sé cómo explicarlo exactamente, pero contigo todo se siente
+        diferente, más bonito, más ligero, más verdadero. 🫀😌 Y si algún día dudo
         de algo, nunca voy a dudar de lo que siento por ti.<br>
-        No te prometo un camino sin problemas, pero sí una compañía sincera, un 
+        No te prometo un camino sin problemas, pero sí una compañía sincera, un
         cariño que no se esconde y un amor que elige quedarse, incluso en los
         días difíciles. 🫅🏻❤️<br>
-        Gracias por existir, por llegar a mi vida y por hacerla sentir más 
+        Gracias por existir, por llegar a mi vida y por hacerla sentir más
         especial. Gracias por darme la oportunidad de entrar a tu corazoncito. ❤️🫅🏻
         </p>
 
@@ -1400,7 +1471,36 @@
 
 
   <!-- ==========================
-       6. REPRODUCTOR DE MÚSICA
+       7. ÚLTIMA PORTADA ROMÁNTICA
+       FOTO A PANTALLA COMPLETA
+  ========================== -->
+
+  <section class="tarjeta-final">
+
+    <div class="texto-final">
+
+      <p class="corazon-final">♥</p>
+
+      <h2 class="nombres-final">
+        F & A
+      </h2>
+
+      <p class="dedicatoria-final">
+        Para ti, con todo mi cariño.
+      </p>
+
+      <p class="firma-final">
+        29 · 11 · 2026
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================
+       8. REPRODUCTOR DE MÚSICA
   ========================== -->
 
   <script>
