@@ -343,7 +343,169 @@
 
 
     /* ==========================
-       5. CELULARES
+       5. NUESTRA LÍNEA DEL TIEMPO
+    ========================== */
+
+    .linea-tiempo {
+      background: #f8e9e3;
+      padding: 60px 20px 70px;
+      color: #49332f;
+    }
+
+    .encabezado-tiempo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .subtitulo-tiempo {
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #a18a7e;
+      margin-bottom: 15px;
+    }
+
+    .titulo-tiempo {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(27px, 6vw, 38px);
+      font-weight: 400;
+      color: #49332f;
+    }
+
+    .descripcion-tiempo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-style: italic;
+      color: #a18a7e;
+      margin-top: 10px;
+    }
+
+    .contenedor-tiempo {
+      max-width: 750px;
+      margin: auto;
+      position: relative;
+      padding: 10px 0;
+    }
+
+    /* LÍNEA VERTICAL */
+
+    .contenedor-tiempo::before {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: 20px;
+      bottom: 20px;
+      width: 2px;
+      background: #d9b7a9;
+    }
+
+    /* AÑOS */
+
+    .anio-tiempo {
+      font-family: 'Playfair Display', serif;
+      font-size: 27px;
+      color: #a44759;
+      margin: 30px 0 25px;
+      padding-left: 45px;
+    }
+
+    /* EVENTOS */
+
+    .evento-tiempo {
+      position: relative;
+      padding-left: 45px;
+      margin-bottom: 28px;
+    }
+
+    .evento-tiempo::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      background: #a44759;
+      border: 3px solid #f8e9e3;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    /* TARJETAS */
+
+    .tarjeta-evento {
+      position: relative;
+      background: #f5e2d9;
+      border-radius: 12px;
+      padding: 22px;
+      padding-right: 115px;
+      min-height: 135px;
+
+      box-shadow:
+        0 5px 18px rgba(91, 57, 45, 0.05);
+    }
+
+    .fecha-evento {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: #a44759;
+      margin-bottom: 9px;
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+
+    .nombre-evento {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 500;
+      color: #49332f;
+      margin-bottom: 7px;
+    }
+
+    .descripcion-evento {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      line-height: 1.4;
+      color: #80665d;
+    }
+
+    /* ESPACIO PARA AGREGAR FOTOS */
+
+    .foto-evento {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+
+      width: 85px;
+      height: 95px;
+
+      border-radius: 10px;
+      overflow: hidden;
+
+      background: #ead5cb;
+      border: 2px solid #fff5ef;
+    }
+
+    .foto-evento img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .final-tiempo {
+      text-align: center;
+      margin-top: 40px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: #a44759;
+    }
+
+
+    /* ==========================
+       6. CELULARES
     ========================== */
 
     @media screen and (max-width: 600px) {
@@ -464,11 +626,71 @@
         font-size: 21px;
       }
 
+      /* LÍNEA DEL TIEMPO EN CELULAR */
+
+      .linea-tiempo {
+        padding: 45px 15px 55px;
+      }
+
+      .titulo-tiempo {
+        font-size: 29px;
+      }
+
+      .contenedor-tiempo::before {
+        left: 10px;
+      }
+
+      .anio-tiempo {
+        font-size: 24px;
+        padding-left: 35px;
+      }
+
+      .evento-tiempo {
+        padding-left: 35px;
+        margin-bottom: 22px;
+      }
+
+      .evento-tiempo::before {
+        left: 3px;
+        width: 14px;
+        height: 14px;
+      }
+
+      .tarjeta-evento {
+        padding: 16px;
+        padding-right: 95px;
+        min-height: 125px;
+      }
+
+      .nombre-evento {
+        font-size: 19px;
+      }
+
+      .fecha-evento {
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      .descripcion-evento {
+        font-size: 16px;
+      }
+
+      .foto-evento {
+        right: 10px;
+        width: 72px;
+        height: 85px;
+        border-radius: 8px;
+      }
+
+      .final-tiempo {
+        font-size: 18px;
+      }
+
     }
 
 
     /* ==========================
-       6. CELULARES PEQUEÑOS
+       7. CELULARES PEQUEÑOS
     ========================== */
 
     @media screen and (max-width: 360px) {
@@ -504,11 +726,32 @@
         font-size: 18px;
       }
 
+      /* LÍNEA DEL TIEMPO */
+
+      .tarjeta-evento {
+        padding: 13px;
+        padding-right: 82px;
+      }
+
+      .foto-evento {
+        width: 62px;
+        height: 75px;
+        right: 8px;
+      }
+
+      .nombre-evento {
+        font-size: 17px;
+      }
+
+      .descripcion-evento {
+        font-size: 15px;
+      }
+
     }
 
 
     /* ==========================
-       7. LAPTOP Y COMPUTADORAS
+       8. LAPTOP Y COMPUTADORAS
     ========================== */
 
     @media screen and (min-width: 768px) {
@@ -584,7 +827,7 @@
     <div class="reproductor">
 
       <button class="boton-play" id="playBtn" aria-label="Reproducir canción">
-        ▶
+        ▶️
       </button>
 
     </div>
@@ -746,7 +989,7 @@
       </p>
 
       <p class="corazon-carta">
-        ♥
+        ♥️
       </p>
 
     </div>
@@ -756,7 +999,253 @@
 
 
   <!-- ==========================
-       5. REPRODUCTOR DE MÚSICA
+       5. NUESTRA LÍNEA DEL TIEMPO
+       DESPUÉS DE LA CARTA
+  ========================== -->
+
+  <section class="linea-tiempo">
+
+    <div class="encabezado-tiempo">
+
+      <p class="subtitulo-tiempo">
+        NUESTRA HISTORIA
+      </p>
+
+      <h2 class="titulo-tiempo">
+        Algunos momentos que nos han hecho felices
+      </h2>
+
+      <p class="descripcion-tiempo">
+        Cada fecha guarda un pedacito de nosotros ❤️
+      </p>
+
+    </div>
+
+
+    <div class="contenedor-tiempo">
+
+
+      <!-- AÑO 2025 -->
+
+      <h3 class="anio-tiempo">2025</h3>
+
+
+      <!-- PRIMERA CITA -->
+
+      <div class="evento-tiempo">
+
+        <div class="tarjeta-evento">
+
+          <p class="fecha-evento">
+            17 de mayo de 2025
+          </p>
+
+          <h3 class="nombre-evento">
+            Nuestra primera cita
+          </h3>
+
+          <p class="descripcion-evento">
+            El comienzo de una historia que nunca imaginamos
+            que se volvería tan especial.
+          </p>
+
+          <div class="foto-evento">
+            <img src="imagenes/photo_1.png" alt="Nuestra primera cita">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FLORES -->
+
+      <div class="evento-tiempo">
+
+        <div class="tarjeta-evento">
+
+          <p class="fecha-evento">
+            31 de mayo de 2025
+          </p>
+
+          <h3 class="nombre-evento">
+            Mis primeras flores
+          </h3>
+
+          <p class="descripcion-evento">
+            Un detalle que hizo que mi día fuera todavía
+            más bonito. 🌷
+          </p>
+
+          <div class="foto-evento">
+            <img src="imagenes/photo_2.png" alt="Las flores">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- PRIMER BESO -->
+
+      <div class="evento-tiempo">
+
+        <div class="tarjeta-evento">
+
+          <p class="fecha-evento">
+            24 de junio de 2025
+          </p>
+
+          <h3 class="nombre-evento">
+            Nuestro primer beso
+          </h3>
+
+          <p class="descripcion-evento">
+            Un momento que siempre voy a llevar
+            guardado en mi corazón. ❤️
+          </p>
+
+          <div class="foto-evento">
+            <img src="imagenes/photo_3.png" alt="Nuestro primer beso">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ME PEDISTE SER TU NOVIA -->
+
+      <div class="evento-tiempo">
+
+        <div class="tarjeta-evento">
+
+          <p class="fecha-evento">
+            29 de noviembre de 2025
+          </p>
+
+          <h3 class="nombre-evento">
+            Me pediste ser tu novia
+          </h3>
+
+          <p class="descripcion-evento">
+            El día en que comenzamos oficialmente
+            nuestra historia de amor. El sí más bonito
+            de mi vida. 💗
+          </p>
+
+          <div class="foto-evento">
+            <img src="imagenes/photo_4.png" alt="El día que nos hicimos novios">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- AÑO 2026 -->
+
+      <h3 class="anio-tiempo">2026</h3>
+
+
+      <!-- PRIMERA IDA AL CINE -->
+
+      <div class="evento-tiempo">
+
+        <div class="tarjeta-evento">
+
+          <p class="fecha-evento">
+            9 de enero de 2026
+          </p>
+
+          <h3 class="nombre-evento">
+            Nuestra primera ida al cine
+          </h3>
+
+          <p class="descripcion-evento">
+            Nuestra primera vez disfrutando una película
+            juntos. Un recuerdo más para nosotros. 🎬
+          </p>
+
+          <div class="foto-evento">
+            <img src="imagenes/photo_5.png" alt="Nuestra primera ida al cine">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FERIA -->
+
+      <div class="evento-tiempo">
+
+        <div class="tarjeta-evento">
+
+          <p class="fecha-evento">
+            7 de febrero de 2026
+          </p>
+
+          <h3 class="nombre-evento">
+            Nuestra visita a la feria
+          </h3>
+
+          <p class="descripcion-evento">
+            Un día lleno de diversión, risas y momentos
+            que quiero repetir contigo. 🎡
+          </p>
+
+          <div class="foto-evento">
+            <img src="imagenes/photo_6.png" alt="Nuestra visita a la feria">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- CITA SOLITOS -->
+
+      <div class="evento-tiempo">
+
+        <div class="tarjeta-evento">
+
+          <p class="fecha-evento">
+            1 de marzo de 2026
+          </p>
+
+          <h3 class="nombre-evento">
+            Una cita solitos
+          </h3>
+
+          <p class="descripcion-evento">
+            Un día para nosotros, para disfrutar
+            de nuestra compañía y seguir creando
+            recuerdos juntos. ❤️
+          </p>
+
+          <div class="foto-evento">
+            <img src="imagenes/photo_7.png" alt="Nuestra cita">
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <p class="final-tiempo">
+      Y todavía nos quedan miles de fechas por escribir... ♥
+    </p>
+
+  </section>
+
+
+
+  <!-- ==========================
+       6. REPRODUCTOR DE MÚSICA
   ========================== -->
 
   <script>
@@ -779,14 +1268,14 @@
       } else {
 
         musica.pause();
-        boton.textContent = "▶";
+        boton.textContent = "▶️";
 
       }
 
     });
 
     musica.addEventListener("ended", () => {
-      boton.textContent = "▶";
+      boton.textContent = "▶️";
     });
 
   </script>
