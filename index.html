@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
+
+    /* CONFIGURACIÓN GENERAL */
+
     * {
       margin: 0;
       padding: 0;
@@ -28,7 +32,10 @@
       overflow-x: hidden;
     }
 
-    /* PORTADA */
+
+    /* ==========================
+       1. PORTADA PRINCIPAL
+    ========================== */
 
     .portada {
       position: relative;
@@ -51,8 +58,8 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      text-align: center;
 
+      text-align: center;
       padding: 50px 20px;
     }
 
@@ -84,13 +91,16 @@
     }
 
     .fecha {
-      font-size: clamp(9px, 2.5vw, 11px);
+      font-size: 11px;
       letter-spacing: 2px;
       text-transform: uppercase;
       line-height: 1.8;
     }
 
-    /* SECCIÓN DE CANCIÓN */
+
+    /* ==========================
+       2. NUESTRA CANCIÓN
+    ========================== */
 
     .cancion {
       min-height: 300px;
@@ -167,16 +177,96 @@
       transform: scale(1.1);
     }
 
-    /* CELULARES */
+
+    /* ==========================
+       3. GALERÍA HORIZONTAL
+    ========================== */
+
+    .galeria {
+      background: #f8e9e3;
+      color: #49332f;
+      padding: 55px 0 65px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .subtitulo-galeria {
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #a18a7e;
+      margin-bottom: 15px;
+    }
+
+    .titulo-galeria {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(25px, 6vw, 36px);
+      font-weight: 400;
+      margin-bottom: 35px;
+      color: #49332f;
+      padding: 0 15px;
+    }
+
+    /* CONTENEDOR DE FOTOS */
+
+    .contenedor-fotos {
+      display: flex;
+      gap: 18px;
+
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      padding: 5px 20px 20px;
+
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+
+      scrollbar-width: none;
+    }
+
+    .contenedor-fotos::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* CADA FOTOGRAFÍA */
+
+    .foto-galeria {
+      flex: 0 0 280px;
+      height: 350px;
+
+      border-radius: 25px;
+      overflow: hidden;
+
+      background: #ead5cb;
+
+      scroll-snap-align: center;
+    }
+
+    .foto-galeria img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      display: block;
+
+      transition: transform 0.4s ease;
+    }
+
+    .foto-galeria:hover img {
+      transform: scale(1.04);
+    }
+
+
+    /* ==========================
+       4. CELULARES
+    ========================== */
 
     @media screen and (max-width: 600px) {
 
       .portada {
         min-height: 75vh;
         min-height: 75svh;
-
         padding: 35px 15px;
-
         background-position: center center;
       }
 
@@ -227,9 +317,36 @@
         height: 65px;
         font-size: 24px;
       }
+
+      /* GALERÍA EN CELULAR */
+
+      .galeria {
+        padding: 45px 0 55px;
+      }
+
+      .titulo-galeria {
+        font-size: 27px;
+        margin-bottom: 28px;
+      }
+
+      .contenedor-fotos {
+        gap: 15px;
+        padding: 5px 20px 20px;
+      }
+
+      .foto-galeria {
+        flex: 0 0 78vw;
+        height: 390px;
+        max-height: 65vh;
+        border-radius: 23px;
+      }
+
     }
 
-    /* CELULARES MUY PEQUEÑOS */
+
+    /* ==========================
+       5. CELULARES PEQUEÑOS
+    ========================== */
 
     @media screen and (max-width: 360px) {
 
@@ -250,9 +367,18 @@
         width: 145px;
         height: 145px;
       }
+
+      .foto-galeria {
+        flex-basis: 82vw;
+        height: 340px;
+      }
+
     }
 
-    /* LAPTOP Y COMPUTADORAS */
+
+    /* ==========================
+       6. LAPTOP Y COMPUTADORAS
+    ========================== */
 
     @media screen and (min-width: 768px) {
 
@@ -270,14 +396,24 @@
         width: 210px;
         height: 210px;
       }
+
+      .foto-galeria {
+        flex: 0 0 300px;
+        height: 380px;
+      }
+
     }
 
   </style>
 </head>
 
+
 <body>
 
-  <!-- PORTADA PRINCIPAL -->
+
+  <!-- ==========================
+       PORTADA PRINCIPAL
+  ========================== -->
 
   <section class="portada">
 
@@ -298,7 +434,10 @@
   </section>
 
 
-  <!-- NUESTRA CANCIÓN -->
+
+  <!-- ==========================
+       NUESTRA CANCIÓN
+  ========================== -->
 
   <section class="cancion">
 
@@ -319,7 +458,52 @@
   </section>
 
 
-  <!-- REPRODUCTOR -->
+
+  <!-- ==========================
+       GALERÍA DE RECUERDOS
+  ========================== -->
+
+  <section class="galeria">
+
+    <p class="subtitulo-galeria">
+      GALERÍA
+    </p>
+
+    <h2 class="titulo-galeria">
+      Momentos que no se borran
+    </h2>
+
+    <div class="contenedor-fotos">
+
+      <div class="foto-galeria">
+        <img src="imagenes/galeria_1.jpg" alt="Nuestro recuerdo 1">
+      </div>
+
+      <div class="foto-galeria">
+        <img src="imagenes/galeria_2.jpg" alt="Nuestro recuerdo 2">
+      </div>
+
+      <div class="foto-galeria">
+        <img src="imagenes/galeria_3.jpg" alt="Nuestro recuerdo 3">
+      </div>
+
+      <div class="foto-galeria">
+        <img src="imagenes/galeria_4.jpg" alt="Nuestro recuerdo 4">
+      </div>
+
+      <div class="foto-galeria">
+        <img src="imagenes/galeria_5.jpg" alt="Nuestro recuerdo 5">
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==========================
+       REPRODUCTOR DE MÚSICA
+  ========================== -->
 
   <script>
 
@@ -352,6 +536,7 @@
     });
 
   </script>
+
 
 </body>
 </html>
