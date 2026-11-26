@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -121,61 +122,6 @@
       margin-bottom: 35px;
     }
 
-    .reproductor {
-      width: 190px;
-      height: 190px;
-      max-width: 65vw;
-      max-height: 65vw;
-
-      border-radius: 50%;
-
-      background-image: url("imagenes/foto_2.png");
-      background-position: center;
-      background-size: cover;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      position: relative;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-
-    .reproductor::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.15);
-    }
-
-    .boton-play {
-      position: relative;
-      z-index: 2;
-
-      width: 75px;
-      height: 75px;
-
-      border: none;
-      border-radius: 50%;
-
-      background: #e71945;
-      color: white;
-      font-size: 27px;
-
-      cursor: pointer;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      transition: transform 0.3s;
-    }
-
-    .boton-play:hover {
-      transform: scale(1.1);
-    }
-
     /* TARJETA DE SPOTIFY */
 
     .spotify-titulo {
@@ -242,16 +188,12 @@
     .contenedor-fotos {
       display: flex;
       gap: 18px;
-
       overflow-x: auto;
       overflow-y: hidden;
-
       padding: 5px 20px 20px;
-
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
-
       scrollbar-width: none;
     }
 
@@ -262,10 +204,8 @@
     .foto-galeria {
       flex: 0 0 280px;
       height: 350px;
-
       border-radius: 25px;
       overflow: hidden;
-
       background: #ead5cb;
       scroll-snap-align: center;
     }
@@ -273,10 +213,8 @@
     .foto-galeria img {
       width: 100%;
       height: 100%;
-
       object-fit: cover;
       display: block;
-
       transition: transform 0.4s ease;
     }
 
@@ -319,15 +257,10 @@
       width: 100%;
       max-width: 750px;
       margin: auto;
-
       background: #f5e2d9;
-
       padding: 50px 55px;
-
       border-radius: 4px;
-
-      box-shadow:
-        0 8px 30px rgba(91, 57, 45, 0.06);
+      box-shadow: 0 8px 30px rgba(91, 57, 45, 0.06);
     }
 
     .etiqueta-carta {
@@ -456,9 +389,7 @@
       padding: 22px;
       padding-right: 115px;
       min-height: 135px;
-
-      box-shadow:
-        0 5px 18px rgba(91, 57, 45, 0.05);
+      box-shadow: 0 5px 18px rgba(91, 57, 45, 0.05);
     }
 
     .fecha-evento {
@@ -491,13 +422,10 @@
       top: 50%;
       right: 15px;
       transform: translateY(-50%);
-
       width: 85px;
       height: 95px;
-
       border-radius: 10px;
       overflow: hidden;
-
       background: #ead5cb;
       border: 2px solid #fff5ef;
     }
@@ -585,7 +513,6 @@
 
     /* ==========================
        7. ÚLTIMA PORTADA ROMÁNTICA
-       FOTO A PANTALLA COMPLETA
     ========================== */
 
     .tarjeta-final {
@@ -717,17 +644,6 @@
         height: 152px;
       }
 
-      .reproductor {
-        width: 165px;
-        height: 165px;
-      }
-
-      .boton-play {
-        width: 65px;
-        height: 65px;
-        font-size: 24px;
-      }
-
       /* GALERÍA EN CELULAR */
 
       .galeria {
@@ -789,7 +705,7 @@
         font-size: 21px;
       }
 
-      /* ESPACIO EXTRA EN CELULAR */
+      /* ESPACIO EXTRA  */
 
       .seccion-extra {
         padding: 45px 15px 55px;
@@ -916,11 +832,6 @@
         letter-spacing: 1px;
       }
 
-      .reproductor {
-        width: 145px;
-        height: 145px;
-      }
-
       .foto-galeria {
         flex-basis: 82vw;
         height: 340px;
@@ -982,11 +893,6 @@
         min-height: 350px;
       }
 
-      .reproductor {
-        width: 210px;
-        height: 210px;
-      }
-
       .foto-galeria {
         flex: 0 0 300px;
         height: 380px;
@@ -994,6 +900,138 @@
 
       .seccion-carta {
         padding: 70px 30px 90px;
+      }
+
+    }
+
+
+    /* ==========================
+       CONTADOR DE NUESTRO AMOR
+    ========================== */
+
+    .contador-amor {
+      background: #f8e9e3;
+      color: #210c0c;
+      padding: 55px 15px 60px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .adornos-contador {
+      color: #6e101b;
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      letter-spacing: 8px;
+      margin-bottom: 25px;
+    }
+
+    .fecha-amor {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 9vw, 78px);
+      font-weight: 500;
+      color: #790d19;
+      margin-bottom: 40px;
+    }
+
+    .marco-contador {
+      max-width: 750px;
+      margin: auto;
+      padding: 25px 10px;
+      border: 1px solid rgba(120, 60, 60, 0.12);
+    }
+
+    .juntos-texto {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 18px;
+      color: #371919;
+    }
+
+    .corazon-contador {
+      color: #9d1528;
+      font-size: 28px;
+      margin: 0 12px;
+    }
+
+    .reloj-contador {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 5px;
+      align-items: center;
+    }
+
+    .numero-contador {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 7vw, 65px);
+      color: #120909;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .numero-contador.segundos {
+      color: #a20d20;
+    }
+
+    .etiqueta-contador {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(9px, 2vw, 16px);
+      margin-top: 8px;
+      color: #371919;
+      text-transform: uppercase;
+    }
+
+    .mensaje-contador {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(25px, 6vw, 43px);
+      font-style: italic;
+      color: #241014;
+      margin-top: 45px;
+      line-height: 1.3;
+    }
+
+    .corazones-decoracion {
+      color: #9d1528;
+      font-size: 35px;
+      letter-spacing: 35px;
+      margin-top: 25px;
+      padding-left: 35px;
+    }
+
+    @media screen and (max-width: 400px) {
+
+      .contador-amor {
+        padding: 40px 8px 45px;
+      }
+
+      .adornos-contador {
+        font-size: 30px;
+      }
+
+      .marco-contador {
+        padding: 20px 3px;
+      }
+
+      .juntos-texto {
+        font-size: 18px;
+      }
+
+      .numero-contador {
+        font-size: clamp(23px, 7vw, 27px);
+      }
+
+      .etiqueta-contador {
+        font-size: 8px;
+      }
+
+      .corazon-contador {
+        font-size: 20px;
+        margin: 0 5px;
+      }
+
+      .corazones-decoracion {
+        letter-spacing: 20px;
+        padding-left: 20px;
       }
 
     }
@@ -1031,18 +1069,68 @@
 
 
   <!-- ==========================
-       2. NUESTRA CANCIÓN
+       2. CONTADOR DE NUESTRO AMOR
+  ========================== -->
+
+  <section class="contador-amor">
+
+    <div class="adornos-contador">❧ ♥ ❧</div>
+
+    <h2 class="fecha-amor">29/11/2025</h2>
+
+    <div class="marco-contador">
+
+      <p class="juntos-texto">
+        <span class="corazon-contador">♥</span>
+        JUNTOS A:
+        <span class="corazon-contador">♥</span>
+      </p>
+
+      <div class="reloj-contador">
+
+        <div>
+          <div class="numero-contador" id="dias">000</div>
+          <div class="etiqueta-contador">DÍAS</div>
+        </div>
+
+        <div>
+          <div class="numero-contador" id="horas">00</div>
+          <div class="etiqueta-contador">HORAS</div>
+        </div>
+
+        <div>
+          <div class="numero-contador" id="minutos">00</div>
+          <div class="etiqueta-contador">MINUTOS</div>
+        </div>
+
+        <div>
+          <div class="numero-contador segundos" id="segundos">00</div>
+          <div class="etiqueta-contador">SEGUNDOS</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="corazones-decoracion">♥ ♥</div>
+
+    <p class="mensaje-contador">
+      Han sido los mejores días de mi vida ❤️
+    </p>
+
+  </section>
+
+
+
+  <!-- ==========================
+       3. NUESTRA CANCIÓN
   ========================== -->
 
   <section class="cancion">
 
     <p class="titulo-cancion">
-      La escogi porque fue la primera que me dedicaste 
+      La escogi porque fue la primera que me dedicaste
     </p>
-
-    
-
-    <!-- REPRODUCTOR VERDE DE SPOTIFY -->
 
     <h2 class="spotify-titulo">
       NUESTRA CANCIÓN ✨
@@ -1054,20 +1142,21 @@
 
     <div class="spotify-card">
 
-  <iframe
-    src="https://open.spotify.com/embed/track/3jbT1Y5MoPwEIpZndDDwVq?utm_source=generator&theme=0"
-    title="Adicto - Tainy, Anuel AA, Ozuna"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy">
-  </iframe>
+      <iframe
+        src="https://open.spotify.com/embed/track/3jbT1Y5MoPwEIpZndDDwVq?utm_source=generator&theme=0"
+        title="Adicto - Tainy, Anuel AA, Ozuna"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
 
-</div>
+    </div>
+
   </section>
 
 
 
   <!-- ==========================
-       3. GALERÍA DE RECUERDOS
+       4. GALERÍA DE RECUERDOS
   ========================== -->
 
   <section class="galeria">
@@ -1109,7 +1198,7 @@
 
 
   <!-- ==========================
-       4. CARTA PARA MI AMOR
+       5. CARTA PARA MI AMOR
   ========================== -->
 
   <section class="seccion-carta">
@@ -1227,7 +1316,7 @@
 
 
   <!-- ==========================
-       5. NUESTRA LÍNEA DEL TIEMPO
+       6. NUESTRA LÍNEA DEL TIEMPO
   ========================== -->
 
   <section class="linea-tiempo">
@@ -1472,7 +1561,7 @@
 
 
   <!-- ==========================
-       6. ESPACIO PARA MÁS TEXTO
+       7. ESPACIO PARA MÁS TEXTO
   ========================== -->
 
   <section class="seccion-extra">
@@ -1531,8 +1620,7 @@
 
 
   <!-- ==========================
-       7. ÚLTIMA PORTADA ROMÁNTICA
-       FOTO A PANTALLA COMPLETA
+       8. ÚLTIMA PORTADA ROMÁNTICA
   ========================== -->
 
   <section class="tarjeta-final">
@@ -1560,37 +1648,54 @@
 
 
   <!-- ==========================
-       8. REPRODUCTOR DE MÚSICA
+       CONTADOR AUTOMÁTICO
   ========================== -->
 
   <script>
 
-    
+    // Comenzaron su relación el 29 de noviembre de 2025.
+    // JavaScript cuenta los meses desde cero: noviembre es 10.
 
-    boton.addEventListener("click", () => {
+    const fechaInicio = new Date(2025, 10, 29, 0, 0, 0);
 
-      if (musica.paused) {
+    function actualizarContador() {
 
-        musica.play()
-          .then(() => {
-            boton.textContent = "Ⅱ";
-          })
-          .catch(() => {
-            alert("Agrega tu archivo de música para reproducirlo ❤️");
-          });
+      const ahora = new Date();
 
-      } else {
+      let diferencia = Math.max(
+        0,
+        Math.floor((ahora - fechaInicio) / 1000)
+      );
 
-        musica.pause();
-        boton.textContent = "▶️";
+      const dias = Math.floor(diferencia / 86400);
 
-      }
+      const horas = Math.floor(
+        (diferencia % 86400) / 3600
+      );
 
-    });
+      const minutos = Math.floor(
+        (diferencia % 3600) / 60
+      );
 
-    musica.addEventListener("ended", () => {
-      boton.textContent = "▶️";
-    });
+      const segundos = diferencia % 60;
+
+      document.getElementById("dias").textContent =
+        String(dias).padStart(3, "0");
+
+      document.getElementById("horas").textContent =
+        String(horas).padStart(2, "0");
+
+      document.getElementById("minutos").textContent =
+        String(minutos).padStart(2, "0");
+
+      document.getElementById("segundos").textContent =
+        String(segundos).padStart(2, "0");
+
+    }
+
+    actualizarContador();
+
+    setInterval(actualizarContador, 1000);
 
   </script>
 
